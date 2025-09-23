@@ -18,13 +18,13 @@ static const char *fonts[]               = { "MesloLGS Nerd Font Mono:size=16", 
 static const char nord0[]                = "#2e3440";
 static const char nord1[]                = "#3b4252";
 static const char nord2[]                = "#434c5e";
-static const char nord3[]                = "#4c566a";
 static const char nord4[]                = "#d8dee9";
+static const char nord6[]                = "#eceff4";
 
 static const char *colors[][3]           = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { nord3,     nord0,     nord1 },
-	[SchemeSel]  = { nord4,     nord0,     nord2 },
+	[SchemeNorm] = { nord4,     nord0,     nord1 },
+	[SchemeSel]  = { nord6,     nord2,     nord2 },
 };
 
 static const char *const autostart[] = {
