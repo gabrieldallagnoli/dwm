@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int refreshrate    = 120;      /* refresh rate for smoother window movements */
+static const unsigned int refreshrate    = 180;      /* refresh rate for smoother window movements */
 static const unsigned int borderpx       = 1;        /* border pixel of windows */
 static const unsigned int snap           = 16;       /* snap pixel */
 static const unsigned int systraypinning = 0;        /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -50,7 +50,6 @@ static const Rule rules[] = {
     { "steam",           NULL,       NULL,            0,         1,          0,           0,         -1 },
 	{ "zenity",          NULL,       NULL,            0,         1,          0,           0,         -1 },
 	{ "qBittorrent",     NULL,       NULL,            0,         1,          0,           0,         -1 },
-	{ "pavucontrol",     NULL,       NULL,            0,         1,          0,           0,         -1 },
 	{ NULL,              NULL,       "Event Tester",  0,         0,          0,           1,         -1 }, /* xev */
 };
 
@@ -97,6 +96,7 @@ static const Key keys[] = {
 	{ MODKEY|ControlMask,           XK_i,          spawn,            SHCMD ("pgrep -x 'picom' > /dev/null && killall picom || picom -b") },
 	{ MODKEY|ControlMask|ShiftMask, XK_r,          spawn,            SHCMD ("systemctl reboot") },
 	{ MODKEY|ControlMask|ShiftMask, XK_s,          spawn,            SHCMD ("systemctl poweroff") },
+    { MODKEY,                       XK_w,          spawn,            SHCMD ("looking-glass-client -F") },
 	{ MODKEY,                       XK_e,          spawn,            SHCMD ("xdg-open .") },
 	{ MODKEY,                       XK_b,          spawn,            SHCMD ("xdg-open https://") },
 	{ MODKEY,                       XK_k,          focusstack,       {.i = +1 } },
@@ -110,6 +110,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,          setcfact,         {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_h,          setcfact,         {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,          setcfact,         {.f =  0.00} },
+	{ MODKEY|ControlMask,           XK_b,          togglebar,        {0} },
 	{ MODKEY,                       XK_Tab,        view,             {0} },
 	{ MODKEY,                       XK_q,          killclient,       {0} },
 	{ MODKEY,                       XK_space,      setlayout,        {0} },

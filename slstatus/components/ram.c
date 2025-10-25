@@ -49,8 +49,7 @@
 	{
 		uintmax_t total;
 
-		if (pscanf("/proc/meminfo", "MemTotal: %ju kB\n", &total)
-		    != 1)
+		if (pscanf("/proc/meminfo", "MemTotal: %ju kB\n", &total) != 1)
 			return NULL;
 
 		return fmt_human(total * 1024, 1024);

@@ -1,17 +1,13 @@
 [general]
-live_config_reload = true
-
 import = [
-"colors.toml",
-"keybinds.toml",
+  "colors.toml",
+  "keybinds.toml",
 ]
 
 [window]
 dimensions = { columns = 120, lines = 30 }
 padding = { x = 10, y = 10 }
 opacity = 0.9
-title = "Alacritty"
-dynamic_title = false
 
 [font]
 normal = { family = "MesloLGS Nerd Font Mono", style = "Regular" }
@@ -19,10 +15,6 @@ bold = { family = "MesloLGS Nerd Font Mono", style = "Bold" }
 italic = { family = "MesloLGS Nerd Font Mono", style = "Italic" }
 bold_italic = { family = "MesloLGS Nerd Font Mono", style = "Bold Italic" }
 size = 16
-
-[cursor.style]
-shape = "Beam"
-blinking = "Never"
 
 [colors]
 draw_bold_text_with_bright_colors = true

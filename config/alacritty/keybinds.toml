@@ -3,7 +3,7 @@ bindings = [
   { key = "C", mods = "Super", action = "Copy" },
   { key = "V", mods = "Super", action = "Paste" },
   { key = "V", mods = "Control", action = "Paste" },
-  { key = "S", mods = "Control|Shift", action = "Paste" },
+  { key = "Backspace", mods = "Control", action = "ResetFontSize" },
   { key = "Up", mods = "Control|Shift", action = "ScrollLineUp" },
   { key = "Down", mods = "Control|Shift", action = "ScrollLineDown" },
   { key = "K", mods = "Control|Shift", action = "ScrollLineUp" },
@@ -12,5 +12,4 @@ bindings = [
   { key = "PageDown", mods = "Control|Shift", action = "ScrollPageDown" },
   { key = "Home", mods = "Control|Shift", action = "ScrollToTop" },
   { key = "End", mods = "Control|Shift", action = "ScrollToBottom" },
-  { key = "Backspace", mods = "Control|Shift", action = "ResetFontSize" },
 ]
