@@ -36,6 +36,7 @@ static const char *const autostart[] = {
 	"flameshot", NULL,
 	"dunst", NULL,
 	"slstatus", NULL,
+	"sh", "-c", "xrandr --output DP-0 --mode 1920x1080 --rate 180", NULL,
 	NULL /* terminate */
 };
 
